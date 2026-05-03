@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.urls import reverse
 
 class TodoModel(models.Model):
     author = models.ForeignKey('accounts.profile',on_delete=models.SET_NULL,null=True)
@@ -14,6 +15,11 @@ class TodoModel(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_snippet(self):
+        return self.text[:12]
+    def get_absolute_api_url(self):
+        return reverse('todo:api-v1:todo-detail', kwargs={'pk':self.pk})
 
 
 
