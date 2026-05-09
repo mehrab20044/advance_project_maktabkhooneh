@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todo', '0005_alter_todomodel_complete'),
+        ("todo", "0005_alter_todomodel_complete"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='category',
-            name='level',
-            field=models.IntegerField(help_text='number for priority in task', null=True),
+            model_name="category",
+            name="level",
+            field=models.IntegerField(
+                help_text="number for priority in task", null=True
+            ),
         ),
     ]

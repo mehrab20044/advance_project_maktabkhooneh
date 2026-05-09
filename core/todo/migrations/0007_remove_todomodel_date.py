@@ -6,12 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todo', '0006_category_level'),
+        ("todo", "0006_category_level"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='todomodel',
-            name='date',
+            model_name="todomodel",
+            name="date",
         ),
     ]

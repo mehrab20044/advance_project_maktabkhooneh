@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('todo', '0004_rename_status_todomodel_complete'),
+        ("todo", "0004_rename_status_todomodel_complete"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='todomodel',
-            name='complete',
+            model_name="todomodel",
+            name="complete",
             field=models.BooleanField(default=False),
         ),
     ]
